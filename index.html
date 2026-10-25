@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dust Road Racer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c" width="360" height="640"></canvas>
+  <div class="hud"><span id="hl"></span><span id="hr"></span></div>
+  <div id="msg">
+    <section id="s-menu">
+      <h1>Dust Road Racer</h1>
+      <p id="mcar"></p>
+      <div class="pick"><button id="lp" class="sm" aria-label="Previous level">&lsaquo;</button><span id="lvlLabel"></span><button id="ln" class="sm" aria-label="Next level">&rsaquo;</button></div>
+      <button id="goSolo">Race against the computer</button>
+      <button id="goGarage" class="alt">Garage (300 cars)</button>
+      <button id="goMp" class="alt">Race with friends</button>
+    </section>
+    <section id="s-garage" class="hide">
+      <canvas id="gc" width="160" height="200"></canvas>
+      <h2 id="gname"></h2>
+      <div class="stats">
+        <label>Speed<span class="bar"><i id="b1"></i></span></label>
+        <label>Acceleration<span class="bar"><i id="b2"></i></span></label>
+        <label>Grip<span class="bar"><i id="b3"></i></span></label>
+      </div>
+      <div class="pick"><button id="gm10" class="sm">-10</button><button id="gp" class="sm" aria-label="Previous car">&lsaquo;</button><button id="gn" class="sm" aria-label="Next car">&rsaquo;</button><button id="gp10" class="sm">+10</button></div>
+      <div class="row"><button id="gr" class="alt">Random</button><button id="gsel">Use this car</button></div>
+    </section>
+    <section id="s-mp" class="hide">
+      <h2>Race with friends</h2>
+      <input id="pname" maxlength="12" placeholder="Your name" aria-label="Your name">
+      <button id="host">Create a room</button>
+      <div class="row"><input id="code" maxlength="4" placeholder="Room code" aria-label="Room code"><button id="join">Join</button></div>
+      <p id="mpmsg" class="note">Everyone needs this page open. Works on the same WiFi or over the internet.</p>
+      <button id="mpback" class="alt">Back</button>
+    </section>
+    <section id="s-lobby" class="hide">
+      <h2>Room <span id="rcode"></span></h2>
+      <p class="note" id="lnote"></p>
+      <ul id="plist"></ul>
+      <div class="pick" id="lvlRow"><button id="mlp" class="sm">&lsaquo;</button><span id="mlvl"></span><button id="mln" class="sm">&rsaquo;</button></div>
+      <button id="start">Start race</button>
+      <button id="leave" class="alt">Leave room</button>
+    </section>
+    <section id="s-result" class="hide">
+      <h2 id="rtitle"></h2>
+      <ol id="rlist"></ol>
+      <button id="res1">Next</button>
+      <button id="res2" class="alt">Menu</button>
+    </section>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
