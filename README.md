@@ -2,7 +2,7 @@
 
 A top-down desert racing game for phones and desktops. Race five other drivers over 100 levels, pick from **300 cars**, or race your friends online with a room code. Plain HTML, CSS and JavaScript. No build step.
 
-**Play it:** `https://YOUR-USERNAME.github.io/dust-road-racer/` (after you enable GitHub Pages, see below)
+**Play it:** `https://Kelvo618.github.io/dust-road-racer/` (after you enable GitHub Pages, see below)
 
 ## Features
 
